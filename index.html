@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fas fa-book-reader"></i>
+                <h2>Digital Library</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#books"><i class="fas fa-book"></i>Books</a></li>
+                <li><a href="#notes"><i class="fas fa-sticky-note"></i>Notes</a></li>
+                <li><a href="#news"><i class="fas fa-newspaper"></i>News</a></li>
+                <li><a href="#wiki"><i class="fas fa-globe"></i>Wikipedia</a></li>
+                <li><a href="#profile"><i class="fas fa-user"></i>Profile</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="admin-btn">Admin Panel</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Login Modal -->
+            <div class="modal" id="loginModal">
+                <div class="modal-content">
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label>User ID</label>
+                            <input type="number" placeholder="Enter your user ID">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter your password">
+                        </div>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Home Section -->
+            <section id="home" class="active">
+                <div class="welcome-banner">
+                    <h1>Welcome to Digital Library</h1>
+                    <p>Your gateway to knowledge and discovery</p>
+                </div>
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-books"></i>
+                        <h3>Total Books</h3>
+                        <p>1,234</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Active Users</h3>
+                        <p>567</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Books Issued</h3>
+                        <p>89</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Books Section -->
+            <section id="books">
+                <h2>Book Catalog</h2>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search books by title, author, or ID...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="books-grid">
+                    <!-- Book cards will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
